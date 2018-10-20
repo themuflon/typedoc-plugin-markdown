@@ -43,6 +43,20 @@ module.exports = (PluginHost: Application) => {
     type: ParameterType.String,
   });
 
+  app.options.addDeclaration({
+    component: 'markdown',
+    help: 'Use absolute URLs for linking to other .md files',
+    name: 'mdAbsoluteURLs',
+    type: ParameterType.Boolean,
+  });
+
+  app.options.addDeclaration({
+    component: 'markdown',
+    help: 'Optional URL prefix when using absolute URLs',
+    name: 'mdAbsoluteURLPrefix',
+    type: ParameterType.String,
+  });
+
   /**
    * Add the plugin to the converter instance
    */

@@ -2,10 +2,10 @@
 * {{{title}}}
 {{else}}
 {{#unless isGlobals}}
-* [{{title}}]({{relativeURL url}})
+* [{{title}}]({{formatURL url}})
 {{#if dedicatedUrls}}
 {{#each dedicatedUrls}}
-  * [{{title}}]({{relativeURL url}})
+  * [{{title}}]({{formatURL url}})
 {{/each}}
 {{/if}}
 {{#if isInPath}}

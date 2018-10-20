@@ -1,7 +1,7 @@
 {{#if this}}
 {{#if reflection}}
 {{#compact}}
-[{{reflection.name}}]({{relativeURL reflection.url}})
+[{{reflection.name}}]({{formatURL reflection.url}})
 {{#if typeArguments}}
 <{{#each typeArguments}}{{#if @index}}, {{/if}}{{> type}}{{/each}}>
 {{/if}}
@@ -19,7 +19,7 @@
 {{#if types}}
 {{#each types}}{{#if @index}} {{#ifCond ../type '==' 'intersection'}}&{{else}}&#124;{{/ifCond}}{{/if}} {{> type}}{{/each}}
 {{else}}
-{{#if elements}} 
+{{#if elements}}
 {{#compact}}
 [
 {{#each elements}}
@@ -47,5 +47,5 @@
 {{/if}}
 {{/if}}
 {{else}}
-void   
+void
 {{/if}}
